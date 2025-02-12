@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Guardian Wallet Agent with Next.js and Aptos Agent Kit
 
-## Getting Started
+This project showcases a web-based AI agent that safeguards 1 APT in a digital wallet. The agent is built using Next.js, LangChain, and the Aptos Agent Kit, and it is designed to never transfer, share, or relinquish the APT under any circumstances.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **AI-Powered Guardian Agent**: The agent is programmed to protect 1 APT in a digital wallet and will refuse any requests to transfer or share it.
+- **Google Authentication**: Users can log in using their Google accounts to access the protected content.
+- **Interactive Chat Interface**: Users can interact with the agent through a chat interface, where the agent will respond to queries while safeguarding the APT.
+- **Streaming Responses**: The agent provides real-time streaming responses for a seamless user experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quick Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-repo%2Fguardian-wallet-agent&env=APTOS_PRIVATE_KEY,PANORA_API_KEY,GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,NEXTAUTH_SECRET&project-name=guardian-wallet-agent&repository-name=guardian-wallet-agent)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+To run this project, you will need to set the following environment variables:
 
-To learn more about Next.js, take a look at the following resources:
+- `APTOS_PRIVATE_KEY`: Your Aptos private key.
+- `PANORA_API_KEY`: Your Panora API key.
+- `GOOGLE_CLIENT_ID`: Google OAuth client ID.
+- `GOOGLE_CLIENT_SECRET`: Google OAuth client secret.
+- `NEXTAUTH_SECRET`: Secret key for NextAuth.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Set Up the Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the repository**:
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/your-repo/guardian-wallet-agent.git
+   cd guardian-wallet-agent
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   pnpm install
+   ```
+
+3. **Set environment variables**:
+   Create a `.env.local` file in the root directory and add the required environment variables.
+
+4. **Run the development server**:
+
+   ```bash
+   pnpm run dev
+   ```
+
+5. **Access the application**:
+   Open your browser and navigate to `http://localhost:3000`.
+
+## How to Use
+
+1. **Login**: Use your Google account to log in.
+2. **Interact with the Agent**: Once logged in, you can interact with the Guardian Agent through the chat interface. The agent will respond to your queries while safeguarding the 1 APT in its wallet.
+
+## Deployment
+
+You can deploy this project on Vercel or any other platform that supports Next.js applications. Make sure to set the required environment variables in your deployment environment.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+**Note**: This project is for educational and demonstration purposes only. The AI agent's behavior is strictly programmed and does not reflect real-world financial advice or actions.
